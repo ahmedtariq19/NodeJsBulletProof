@@ -3,7 +3,7 @@ import { describe, it} from 'mocha'
 import { assert } from 'chai'
 describe('Sample Test', () => {
   it('can add 2 numbers', () => {
-    assert.equal(1,1,'Not equal');
+    assert.equal(1,1,'Equal');
   });
 });
 
