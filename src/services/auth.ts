@@ -8,6 +8,7 @@ import { IUser, IUserInputDTO } from '../interfaces/IUser';
 import { EventDispatcher, EventDispatcherInterface } from '../decorators/eventDispatcher';
 import events from '../subscribers/events';
 
+
 @Service()
 export default class AuthService {
   constructor(
