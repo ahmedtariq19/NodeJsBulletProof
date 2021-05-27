@@ -22,4 +22,5 @@
   ],
   "all": true,
   "instrument": true
+   "extends": "@istanbuljs/nyc-config-typescript",
 }
