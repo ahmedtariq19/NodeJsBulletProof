@@ -1,7 +1,7 @@
 import universityModel from '../models/universityModel'
 import { RequestHandler } from 'express';
 
-const univerities: universityModel[]=[];
+export const univerities: universityModel[]=[];
  export const createUinversity: RequestHandler = (req,res)=>{
      const {name, worldRank, numberOfStudents, numberOfDepartments} = req.body;
 let newUniversity: universityModel={id:Math.random().toString(),name:name,worldRank:worldRank,numberOfStudents:numberOfStudents,numberOfDepartments:numberOfDepartments};

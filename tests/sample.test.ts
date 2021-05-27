@@ -11,10 +11,9 @@ import mongoose from 'mongoose';
 import MailerService from '../src/services/mailer';
 import { EventDispatcher as EventDispatcherClass } from 'event-dispatch';
 import universityModel from "../src/models/universityModel"
-import {createUinversity, getUinversities} from "../src/services/universityServices"
+import {univerities, createUinversity, getUinversities} from "../src/services/universityServices"
 import university from '../src/api/routes/university';
 import app from '../src/api/index';
-import { doesNotMatch } from 'assert';
 
 
 
@@ -55,8 +54,16 @@ describe('Test university',()=>{
         })
   })
   it('Test create university function',async()=>{
-    let newUniversity: universityModel={id:Math.random().toString(),name:'Cust',worldRank:1000,numberOfStudents:3000,numberOfDepartments:10};
-    expect(createUinversity).to.not.be.null;
+    expect(createUinversity).to.throw()
+  })
+  it('Test get university function',async()=>{
+    expect(getUinversities).to.throw()
+  })
+  it('University route ',async()=>{
+    expect(university).to.throw()
+  })
+  it('University Model',async()=>{
+    expect(universityModel).to.throw
   })
 })
 
