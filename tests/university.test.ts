@@ -1,7 +1,10 @@
 import chai, { expect } from 'chai';
+
+
 import universityModel from '../src/models/universityModel'
 describe('University model',()=>{
     it('should have required fields',()=>{
+
         let uniModel:universityModel
         ={
             id:'asd',
