@@ -11,7 +11,6 @@ import mongoose from 'mongoose';
 import MailerService from '../src/services/mailer';
 import { EventDispatcher as EventDispatcherClass } from 'event-dispatch';
 import universityModel from "../src/models/universityModel"
-import {univerities, createUinversity, getUinversities} from "../src/services/universityServices"
 import university from '../src/api/routes/university';
 import app from '../src/api/index';
 
@@ -21,11 +20,7 @@ import app from '../src/api/index';
 //   const mod = await import('./');
 //     app = (mod as any).default;
 // })
-describe('Sample Test', () => {
-  it('can add 2 numbers', () => {
-    assert.equal(1,1,'Not equal');
-  });
-});
+
 describe('Test university',()=>{
   it('POST Create new university', async()=>{
     let newUniversity: universityModel={id:Math.random().toString(),name:'Cust',worldRank:1000,numberOfStudents:3000,numberOfDepartments:10};
@@ -53,12 +48,12 @@ describe('Test university',()=>{
          // console.log(res.body)
         })
   })
-  it('Test create university function',async()=>{
-    expect(createUinversity).to.throw()
-  })
-  it('Test get university function',async()=>{
-    expect(getUinversities).to.throw()
-  })
+  // it('Test create university function',async()=>{
+  //   expect(createUinversity).to.throw()
+  // })
+  // it('Test get university function',async()=>{
+  //   expect(getUinversities).to.throw()
+  // })
   it('University route ',async()=>{
     expect(university).to.throw()
   })
